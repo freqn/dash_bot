@@ -1,0 +1,176 @@
+body {
+  min-width: 1024px;
+  width: 100%;
+  background: #1E9DF3;
+}
+.robot {
+  margin: 30px auto;
+  position: relative;
+  left: 42.3%;
+}
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 10px solid #777;
+  border-bottom: 80px solid #888;
+  position: relative;
+  left: 140px;
+}
+@keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #585858;
+    background-size: 75px 150px;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #585858;
+    background-size: 75px 150px;
+  }
+}
+@-moz-keyframes blink {
+  50% {
+    background: -moz-radial-gradient(circle, red 15%, transparent 40%), #585858;
+    background-size: 75px 150px;
+  }
+}
+.laser {
+  animation: blink .2s infinite;
+  -webkit-animation: blink .2s infinite;
+  -moz-animation: blink .2s infinite;
+}
+.mouth {
+  height: 0;
+  width: 86px;
+  border-top: 21px solid #000;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  top: 150px;
+  left: 16px;
+}
+.teeth {
+  height: 0;
+  width: 10px;
+  border-top: 21px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  display: inline;
+  position: relative;
+  margin: 0 15px;
+  top: 171px;
+  left: 14px;
+  z-index: 1;
+}
+.brain {
+  background: radial-gradient(circle, #F5F6CE 25%, transparent 38%), #585858;
+  background: -moz-radial-gradient(circle, #F5F6CE 25%, transparent 38%), #585858;
+  background: -webkit-radial-gradient(circle, #F5F6CE 25%, transparent 38%), #585858;
+  background-size: 75px 150px;
+  height: 150px;
+  width: 150px;
+  border-radius: 60px 60px 10px 10px;
+  border-bottom: 40px solid #424242;
+  position: relative;
+  left: 70px;
+}
+.torso {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid #585858;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
+}
+#keypad {
+  width: 160px;
+  position: absolute;
+  top: 320px;
+  left: 65px;
+  z-index: 1;
+}
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #585858;
+  transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  position: relative;
+  top: -319px;
+  left: -205px;
+  z-index: -1;
+}
+.right {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #585858;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  top: -616px;
+  left: 194px;
+  z-index: -1;
+}
+.foot {
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #000;
+  position: relative;
+  left: 110px;
+  top: -10px;
+  z-index: -1;
+}
+@keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+@-webkit-keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+@-moz-keyframes dance {
+  from {
+    left: 800px;
+  }
+}
+.button-group {
+  width: 800px;
+  position: absolute;
+  top: 30px;
+  left: 200px;
+}
+button {
+  display: block;
+  margin: 10px auto;
+  width: 35%;
+  border: none;
+  height: 62px;
+  font-size: 30px;
+  border-radius: 10px;
+  color: #2E2E2E;
+  transition: 0.2s;
+  -moz-transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+button:hover {
+  background: #2E2E2E;
+  color: #fff;
+}
+#bear {
+  animation: dance 8s infinite;
+  -webkit-animation: dance 8s infinite;
+  -moz-animation: dance 8s infinite;
+  position: absolute;
+  z-index: 2;
+  top: 380px;
+  left: 480px;
+}
